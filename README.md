@@ -1,5 +1,5 @@
 
-# COBOL Showcase
+# Eyecare Assistant
 
 Hey there! This repo contains the source code for **Eyecare Assistant**. This project is meant to showcase my ability to use C++ and OpenCV. It is capable of detecting faces and prmpt the user to take frequent breaks from looking at the screen.
 
