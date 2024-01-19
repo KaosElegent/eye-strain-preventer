@@ -27,7 +27,7 @@ The default directory for installation was '/usr/local/' and the compilation too
 After the installation I had to do the following:
 
 1) Create sym links with the following (for standard #include statements): **ln -s /usr/local/include/opencv4/opencv2/ /usr/local/include/opencv2**
-2) Compile the final code using: **g++ -Wall -std=c++11 -o main main.cpp -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_core**
+2) Compile the final code using: **g++ -Wall -std=c++11 -o main main.cpp -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_imgproc -lopencv_objdetect -lopencv_core**
 
 
 # Files
