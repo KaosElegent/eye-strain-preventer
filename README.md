@@ -11,8 +11,6 @@ Hey there! This repo contains the source code for **Eyecare Assistant**. This pr
 
 - [What is this?](https://github.com/KaosElegent/eyecare-assistant/tree/main#what-is-this)
 
-- [Working Demo](https://github.com/KaosElegent/eyecare-assistant/tree/main#working-demo)
-
 - [Notes](https://github.com/KaosElegent/eyecare-assistant/tree/main#notes)
 
 # Challanges
@@ -40,10 +38,7 @@ After the installation I had to do the following:
 
 - The Eyecare Assistant is meant to combat digital eyestrain caused by users staring at their screens for long periods of time.
 - It does so by facial detection and will help reduce Computer Vision Syndrome (CSV) that affects almost 90% of users past the 2-hour mark.
-
-# Working Demo
-
-- [Under Work]
+- This software will check for the presence of the user and if it noticies that the user has been present in the last 10 checks without any break, then a system-wide notification (Ubuntu support only right now) is issued to ask the user to take a break.
 
 # Notes
 

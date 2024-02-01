@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
         }
 
         cap.release();
-        sleep(1);
+        sleep(3000);
     }
 
 
