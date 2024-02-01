@@ -7,7 +7,8 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    system("notify-send ['EyeCare Assistant'] 'Look away from your screen!'");
+    int observation{};
+    system("notify-send ['EyeCare Assistant'] Activated'");
     cv::VideoCapture cap;
     cv::CascadeClassifier face_cascade;
     face_cascade.load("../data/haarcascade_frontalface_default.xml");
@@ -20,7 +21,7 @@ int main(int argc, char** argv) {
         cap.open(0);
         if(!cap.isOpened()){
             cerr << "couldn't open capture." << endl;
-            return -1;
+            sleep(600);
         }
 
         cap >> frame;
@@ -29,15 +30,16 @@ int main(int argc, char** argv) {
         // Detect face
         face_cascade.detectMultiScale(frame,faces);
 
-        // Draw rectangles around faces for demonstration
-        for(size_t i = 0; i < faces.size(); ++i){
-            cv::rectangle(frame, faces[i], cv::Scalar(255,0,0),2);
+        if (faces.size()) observation++;
+        else observation=0;
+
+        if(observation==10){
+            system("notify-send ['EyeCare Assistant'] 'Look away from your screen!'");
+            observation=0;
         }
 
-        cv::imshow("testing",frame);
-        if(cv::waitKey(30) >= 0) break;
         cap.release();
-        sleep(30);
+        sleep(1);
     }
 
 
